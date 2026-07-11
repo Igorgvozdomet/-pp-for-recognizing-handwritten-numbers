@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+
+# Базы данных
+*.db
+*.sqlite
+
+# Модели (большие файлы)
+*.keras
+*.h5
+*.hdf5
+models/
+
+# Исправления пользователей
+corrections/
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+
+# Секреты
+.env
+*.env
