@@ -33,15 +33,16 @@ def main(page: ft.Page):
         cv2.imwrite(f"corrections/{correct_label}/{count}.png", drawing_array)
         
 
-        hide_correction_buttons()
         canvas.shapes.clear()
         drawing_array.fill(0)
         result_text.value = ""
         wrong_button.visible = False
-        hide_correction_buttons()
+        correction_row.visible = False
         canvas.update()
         result_text.update()
         wrong_button.update()
+        correction_row.update() 
+        page.update()    
         
         show_snackbar(f"Сохранено как {correct_label}! Спасибо!")
 
@@ -242,10 +243,12 @@ def main(page: ft.Page):
         drawing_array.fill(0)
         result_text.value = ""
         wrong_button.visible = False
-        hide_correction_buttons()
+        correction_row.visible = False      
         canvas.update()
         result_text.update()
-        page.update()
+        wrong_button.update()              
+        correction_row.update()            
+        page.update()                     
 
 
     def ai_module(e):
